@@ -45,39 +45,43 @@
 	li img { float:left; padding-right: 1em; }
 	li p { font-size: 0.9em; font-style: italic; }
 		
-	.about_me_ph {
+	.about_me_block {
 	background: url(img/profilepic.jpg) no-repeat;
 	border-radius: 40px; 
-	
 	width: 70px;
 	height: 70px;
 	font-size:1.5em; 
 	font-weight: bold; 
 	} 
 	
-	.about_me_ph:hover{
+	.about_me_block:hover{
 	border-radius: 40px; 
 	background: url(img/Sambl4.jpg) no-repeat;
-	float: left;
 	}
 	
 	.about_me_phjs {
 	width: 70px;
-	height: 70px;
+	height: 40px;
+	font-size: 14px;
 	background: red;
 	}
 
 	#about_me{
 	padding-left: 100px;
-	width: 100%;
+	width: 480px;
 	height:70px;
 	}
 	
 	#about_me2{
-	padding-left: 200px;
-	width: 100%;
-	height:70px;
-	background: blue;
+	padding-left: 100px;
+	width: 480px;
+	height:40px;
+	position: absolute;
+	top: 30px;
+	}
+	
+	.about_me_txt {
+	font-size: 14px;
 	}
 	
 	footer {
@@ -100,17 +104,27 @@
   <body>
     <header>
 		<div>
-			<div class="about_me_ph">
-				<div class="about_me_ph:hover" id='about_me'onmouseover="about_me.innerText = 'Dima Samuilik';" 
+			<div class="about_me_block">
+				<div class="about_me_block:hover" id='about_me'onmouseover="about_me.innerText = 'Dima Samuilik';" 
 					onmouseout="about_me.innerText = 'Cameron Pittman';">Cameron Pittman
-				</div>
-				</br>
-			</div>
-			<div class="about_me_phjs">
-				<div id='about_me2'onmouseover="about_me2.innerText = 'Future Developer';" 
+				</div>		
+					
+				<div class="about_me_txt" id='about_me2'onmouseover="about_me2.innerText = 'Possible future Developer';" 
 					onmouseout="about_me2.innerText = 'Course Developer';">Course Developer
 				</div>
 			</div>
+
+			
+						
+						<!--
+						<div  id='about_me2'onmouseover="about_me2.innerText = 'Future Developer';" 
+							onmouseout="about_me2.innerText = 'Course Developer';">Course Developer
+						</div>
+						-->
+						
+					
+				
+			
 		</div>
 	</br>
     </header>

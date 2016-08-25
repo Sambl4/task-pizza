@@ -28,6 +28,7 @@
 	img { border: 0; max-width: 100%; }
 	
 	body { background: #fff; }
+	header {position: relative;}
 	header, footer, .container { max-width: 45em; margin: 0 auto; }
 	
 	header { padding: 0 0.5em; color: #C90B0B; }
@@ -45,29 +46,9 @@
 	li img { float:left; padding-right: 1em; }
 	li p { font-size: 0.9em; font-style: italic; }
 		
-	.about_me_block {
-	background: url(img/profilepic.jpg) no-repeat;
-	border-radius: 40px; 
-	width: 70px;
-	height: 70px;
-	font-size:1.5em; 
-	font-weight: bold; 
-	} 
-	
-	.about_me_block:hover{
-	border-radius: 40px; 
-	background: url(img/Sambl4.jpg) no-repeat;
-	}
-	
-	#about_me{
-	padding-left: 100px;
-	width: 480px;
-	height:70px;
-	}
-	
 	.fio {
 	position: absolute;
-	left: 50%;
+	right: 0px;
 	top: 0px;
 	font-size:14px;
 	}
@@ -81,7 +62,7 @@
 	/* Smartphones (portrait) */
 	@media only screen and (max-width: 480px) {
 	body { font-size: 12px;}
-	header p { padding-left: 4.5em;}
+	header p { font-size:1em; font-weight: bold; padding-left: 3em;}
 	
 	
 	}
@@ -91,16 +72,16 @@
 
   <body>
     <header>
-		<div class="about_me_block">
-			<div class="about_me_block:hover" id='about_me'onmouseover="about_me.innerText = 'Dima Samuilik';" 
-				onmouseout="about_me.innerText = 'Cameron Pittman';">Cameron Pittman
-			</div>		
-		</div>
+		<div onMouseOver="smena('kartinka','img/sambl4.jpg','text_id','Dima Samuilik </br> <span> Possible future Developer</span>')" 
+			onMouseOut="smena('kartinka','img/profilepic.jpg','text_id','Cameron Pittman </br> <span> Course Developer</span>')" >
+			<img src="img/profilepic.jpg" id="kartinka">
+			<p id="text_id"> Cameron Pittman </br> <span> Course Developer</span></p>
+		</div>	
+		
 		<div class="fio">
 			 + 375 29 5670925 </br> sambl4@tut.by
 		</div>	
-	</br>
-    </header>
+	</header>
 
 		<div class="container">
       <div class="hero">
@@ -146,6 +127,16 @@
     <link href="css/print.css" rel="stylesheet" media="print">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	
+	<script language = "javascript">
+			function smena (id, path, tid, str){
+			var ph = document.getElementById(id);
+			var tx = document.getElementById(tid);
+			ph.setAttribute('src',path);
+			tx.innerHTML = str;
+			}
+	</script>
+		
 	 <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
